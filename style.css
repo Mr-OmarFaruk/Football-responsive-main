@@ -16,6 +16,7 @@ body{
 .container
 {
     display: flex;
+    width: 100%;
 }
 .container:hover .image-bar
 {
@@ -113,8 +114,8 @@ body{
 }
 .image-info img
 {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    height: auto;
 }
 /*  .......................top player style grid style end ..................... */
 
@@ -137,6 +138,7 @@ body{
 
 footer img{
     margin-bottom: 20px;
+    width: 100%;
 }
 .footer-section
 {
@@ -156,7 +158,70 @@ footer img{
 /* For mobile devices */
 @media only screen and (max-width:688px)
 {
-    
-    
+    .container{
+        flex-direction: column;
+
+    }
+    .text-bar{
+        margin-left:  16px;
+        margin-right: 16px;
+        margin-top: 50px;
+        margin-bottom: 50px; 
+    }
+    .text-bar h1{
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .image-bar{
+        margin-left: 15px;
+        margin-top: 30px;
+        margin-bottom: 61px;
+    }
+    .image-bar img{
+    width: 329px;
+    height: 260px;
+    }
+
+    /* Players section */
+    .Players-section{
+        width: 360px;
+        margin-left: 15px;
+        margin-top: 47px;
+    }
+    .players
+    {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
+        grid-row-gap: 27px;
+        grid-column-gap: 15px;
+    }
+
+    /* Heighlights section */
+    .heighlites{
+    flex-direction: column;
+    margin: 20px;
+    }
+    .match-info{
+    width: 300px;
+    height: 309px;
+    text-align:left;
+    margin-left: 20px;
+    }
+    .image-info{
+    margin-right: 0;
+    }
+
+    /* Sponsor section */
+    .offcial-sponsor {
+        text-align: center;
+        margin: 0;
+     }
+    .partners{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    }
+
+    /* footer section */
 }
 /*............ media  queries end.................... */
